@@ -26,5 +26,10 @@ public class Databasehandler {
         emFactory.close();
     }
 
+    /* DB Management
+     * Methods to insert into Users Table of FT DB
+     * TODO: implement
+     */
+
 
 }
