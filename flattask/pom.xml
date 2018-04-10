@@ -36,6 +36,28 @@
           <version>2.7.1</version>
       </dependency>
 
+    <!-- https://mvnrepository.com/artifact/javax.faces/jsf-api -->
+    <dependency>
+      <groupId>javax.faces</groupId>
+      <artifactId>jsf-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Prime Faces -->
+      <dependency>
+          <groupId>org.primefaces</groupId>
+          <artifactId>primefaces</artifactId>
+          <version>6.2</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.primefaces.themes/smoothness -->
+      <dependency>
+          <groupId>org.primefaces.themes</groupId>
+          <artifactId>smoothness</artifactId>
+      </dependency>
+
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

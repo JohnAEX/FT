@@ -32,6 +32,9 @@
     <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:2.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.7.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.faces:jsf-api:2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.primefaces:primefaces:6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.primefaces.themes:smoothness:unknown" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
   </component>
 </module>
