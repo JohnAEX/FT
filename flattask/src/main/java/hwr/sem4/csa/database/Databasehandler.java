@@ -18,6 +18,14 @@ public class Databasehandler {
         emFactory = Persistence.createEntityManagerFactory("User");
     }
 
+    public void initCommunitiesDBConnection(){
+        emFactory = Persistence.createEntityManagerFactory("Communities");
+    }
+
+    public void initParticipatorsDBConnection(){
+        emFactory = Persistence.createEntityManagerFactory("Participators");
+    }
+
     public EntityManager getEntityManager() {
         return emFactory.createEntityManager();
     }
