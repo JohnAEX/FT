@@ -10,6 +10,14 @@
   <name>flattask</name>
   <url>http://maven.apache.org</url>
 
+    <repositories>
+        <repository>
+            <id>objectdb</id>
+            <name>ObjectDB Repository</name>
+            <url>http://m2.objectdb.com</url>
+        </repository>
+    </repositories>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -56,7 +64,16 @@
           <artifactId>smoothness</artifactId>
       </dependency>
 
-
+      <dependency>
+          <groupId>com.objectdb</groupId>
+          <artifactId>objectdb</artifactId>
+          <version>2.7.4</version>
+      </dependency>
+      <dependency>
+          <groupId>javax.transaction</groupId>
+          <artifactId>jta</artifactId>
+          <version>1.1</version>
+      </dependency>
 
     <dependency>
       <groupId>junit</groupId>

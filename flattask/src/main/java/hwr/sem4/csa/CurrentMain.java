@@ -51,7 +51,27 @@ public class CurrentMain {
 
         Databasehandler.instanceOf().close();*/
 
+        /*
         Databasehandler.instanceOf().initParticipatorsDBConnection();
+        Participator testParticipator = new Participator();
+        testParticipator.setCreationTime("10.04.2018");
+        testParticipator.setRole("user");
+        testParticipator.setUsername("TestPart1");
+        testParticipator.setPassword("TestPass1");
+        testParticipator.setBalance(100);
+        testParticipator.setFirstName("TestFirst");
+        testParticipator.setLastName("TestLast");
+        testParticipator.setHistory("");
+
+        EntityManager em = Databasehandler.instanceOf().getEntityManager();
+        em.getTransaction().begin();
+        em.persist(testParticipator);
+        em.getTransaction().commit();
+        em.close();
+
+        Databasehandler.instanceOf().close(); */
+
+        Databasehandler.instanceOf().initObjectDBConnection();
         Participator testParticipator = new Participator();
         testParticipator.setCreationTime("10.04.2018");
         testParticipator.setRole("user");

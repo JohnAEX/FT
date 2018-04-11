@@ -26,6 +26,10 @@ public class Databasehandler {
         emFactory = Persistence.createEntityManagerFactory("Participators");
     }
 
+    public void initObjectDBConnection(){
+        emFactory = Persistence.createEntityManagerFactory("myODB.odb");
+    }
+
     public EntityManager getEntityManager() {
         return emFactory.createEntityManager();
     }
