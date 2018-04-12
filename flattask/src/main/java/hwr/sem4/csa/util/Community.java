@@ -11,21 +11,21 @@ import java.util.ArrayList;
 public class Community {
     @Id
     private String id;
-    @Column(name = "ParticipatorIDs")
-    private ArrayList<String> participatorIDs;
-    @Column(name = "TaskObjects")
-    private ArrayList<Task> taskList;
-    @Column(name = "Time_of_creation")
-    private String creationTime;
-    @Column(name = "ToDoObjects")
-    private ArrayList<ToDo> toDoList;
 
-    public ArrayList<ToDo> getToDoList() {
-        return toDoList;
+    private ArrayList<String> participatorIDs;
+
+    private ArrayList<Task> taskList;
+
+    private String creationTime;
+
+    private ArrayList<Dotos> dotosList;
+
+    public ArrayList<Dotos> getDotosList() {
+        return dotosList;
     }
 
-    public void setToDoList(ArrayList<ToDo> toDoList) {
-        this.toDoList = toDoList;
+    public void setDotosList(ArrayList<Dotos> dotosList) {
+        this.dotosList = dotosList;
     }
 
     public String getId() {

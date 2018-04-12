@@ -39,9 +39,9 @@ public class CurrentMain {
         ArrayList<Task> testTasks = new ArrayList<Task>();
         testTasks.add(new Task());
         testCommunity.setTaskList(testTasks);
-        ArrayList<ToDo> testToDos = new ArrayList<ToDo>();
-        testToDos.add(new ToDo());
-        testCommunity.setToDoList(testToDos);
+        ArrayList<Dotos> testToDos = new ArrayList<Dotos>();
+        testToDos.add(new Dotos());
+        testCommunity.setDotosList(testToDos);
 
         EntityManager em = Databasehandler.instanceOf().getEntityManager();
         em.getTransaction().begin();
@@ -71,6 +71,7 @@ public class CurrentMain {
 
         Databasehandler.instanceOf().close(); */
 
+        /*
         Databasehandler.instanceOf().initObjectDBConnection();
         Participator testParticipator = new Participator();
         testParticipator.setCreationTime("10.04.2018");
@@ -89,6 +90,7 @@ public class CurrentMain {
         em.close();
 
         Databasehandler.instanceOf().close();
+        */
 
 
     }
