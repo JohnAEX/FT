@@ -16,11 +16,32 @@
             <name>ObjectDB Repository</name>
             <url>http://m2.objectdb.com</url>
         </repository>
+        <repository>
+            <id>prime-repo</id>
+            <name>PrimeFaces Maven Repository</name>
+            <url>http://repository.primefaces.org</url>
+            <layout>default</layout>
+        </repository>
     </repositories>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <executable>C:\Program Files\Java\jdk1.8.0_161\bin\javac</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
@@ -44,13 +65,35 @@
           <version>2.7.1</version>
       </dependency>
 
-    <!-- https://mvnrepository.com/artifact/javax.faces/jsf-api -->
-    <dependency>
-      <groupId>javax.faces</groupId>
-      <artifactId>jsf-api</artifactId>
-      <version>2.1</version>
-      <scope>provided</scope>
-    </dependency>
+      <!-- https://mvnrepository.com/artifact/javax.faces/jsf-api -->
+      <dependency>
+          <groupId>javax.faces</groupId>
+          <artifactId>jsf-api</artifactId>
+          <version>2.1</version>
+          <scope>provided</scope>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/javax.faces/jsf-impl -->
+      <dependency>
+          <groupId>javax.faces</groupId>
+          <artifactId>jsf-impl</artifactId>
+          <version>1.2-20</version>
+          <scope>provided</scope>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/javax.servlet.jsp.jstl-api -->
+      <dependency>
+          <groupId>javax.servlet.jsp.jstl</groupId>
+          <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+          <version>1.2.1</version>
+      </dependency>
+
+
+      <dependency>
+              <groupId>javax.servlet</groupId>
+              <artifactId>javax.servlet-api</artifactId>
+              <version>3.0.1</version>
+          </dependency>
 
     <!-- Prime Faces -->
       <dependency>
@@ -62,6 +105,7 @@
       <dependency>
           <groupId>org.primefaces.themes</groupId>
           <artifactId>smoothness</artifactId>
+          <version>1.0.10</version>
       </dependency>
 
       <dependency>
@@ -81,10 +125,6 @@
       <version>5.1.1</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter-api</artifactId>
-          <version>RELEASE</version>
-      </dependency>
   </dependencies>
+
 </project>
