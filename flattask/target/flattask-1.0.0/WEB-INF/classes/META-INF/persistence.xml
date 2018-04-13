@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+   http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+
+    <persistence-unit name="Communities" transaction-type="RESOURCE_LOCAL">
+        <class>hwr.sem4.csa.util.Community</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://lm-bln-flatchat1.clciw2tvdadg.eu-central-1.rds.amazonaws.com:3306/FT" />
+            <property name="javax.persistence.jdbc.user" value="John" />
+            <property name="javax.persistence.jdbc.password" value="123123" />
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="Participators" transaction-type="RESOURCE_LOCAL">
+        <class>hwr.sem4.csa.util.Participator</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://lm-bln-flatchat1.clciw2tvdadg.eu-central-1.rds.amazonaws.com:3306/FT" />
+            <property name="javax.persistence.jdbc.user" value="John" />
+            <property name="javax.persistence.jdbc.password" value="123123" />
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+        </properties>
+    </persistence-unit>
+
+</persistence>
