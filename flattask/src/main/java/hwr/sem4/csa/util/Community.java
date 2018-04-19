@@ -12,7 +12,7 @@ public class Community {
     @Id
     private String id;
 
-    private ArrayList<String> participatorIDs;
+    private String name;
 
     private ArrayList<Task> taskList;
 
@@ -36,14 +36,6 @@ public class Community {
         this.id = id;
     }
 
-    public ArrayList<String> getParticipatorIDs() {
-        return participatorIDs;
-    }
-
-    public void setParticipatorIDs(ArrayList<String> participatorIDs) {
-        this.participatorIDs = participatorIDs;
-    }
-
     public ArrayList<Task> getTaskList() {
         return taskList;
     }
@@ -58,5 +50,13 @@ public class Community {
 
     public void setCreationTime(String creationTime) {
         this.creationTime = creationTime;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

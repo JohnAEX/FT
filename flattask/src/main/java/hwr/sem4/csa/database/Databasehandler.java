@@ -15,23 +15,9 @@ public class Databasehandler {
         return thisDBHandler;
     }
 
-    //Following code was used to RDB Connection, this has now become obsolete!
-    /*
-    public void initUsersDBConnection(){
-        emFactory = Persistence.createEntityManagerFactory("User");
-    }
-
-    public void initCommunitiesDBConnection(){
-        emFactory = Persistence.createEntityManagerFactory("Communities");
-    }
-
-    public void initParticipatorsDBConnection(){
-        emFactory = Persistence.createEntityManagerFactory("Participators");
-    }*/
-
     public void initObjectDBConnection(){
-        //Currently working in embedded mode, TODO: Implement CS-Mode for ODB
-        emFactory = Persistence.createEntityManagerFactory("myODB.odb");
+        emFactory = Persistence.createEntityManagerFactory("objectdb:" +
+                "//ec2-54-85-66-232.compute-1.amazonaws.com:6136/test.odb;user=admin;password=admin");
     }
 
     public EntityManager getEntityManager() {
@@ -74,8 +60,8 @@ public class Databasehandler {
             Community resultCommunity = typedResultQuery.setParameter("id",id).getSingleResult();
             return resultCommunity;
         }catch(Exception e){
-            System.out.println("Error in Method: getCommunityById");
-            e.printStackTrace();
+            //System.out.println("Error in Method: getCommunityById");
+            //e.printStackTrace();
             return null;
         }
     }
@@ -97,12 +83,16 @@ public class Databasehandler {
     //special login-method to prevent any false-login attempts
     public Participator getParticipatorByLogin(String username, String password){
         EntityManager em = emFactory.createEntityManager();
-        TypedQuery<Participator> typedResultQuery = em.createQuery("SELECT p FROM Participator p WHERE p.username = :username AND p.password = :password",Participator.class);
+        TypedQuery<Participator> typedResultQuery = em.createQuery("SELECT p FROM Participator p WHERE " +
+                "p.username = :username AND p.password = :password",Participator.class);
         try{
-            Participator resultParticipator = typedResultQuery.setParameter("username",username).setParameter("password", password).getSingleResult();
+            Participator resultParticipator = typedResultQuery.setParameter("username",username)
+                    .setParameter("password", password).getSingleResult();
             return resultParticipator;
         }catch(Exception e){
-            System.out.println("Error in Method: getParticipatorByLogin");
+            System.out.println("Error in Method: getParticipatorByLogin" +
+                    "\nEither this User & Password combination is invalid or" +
+                    "more than one user was falsely found!");
             e.printStackTrace();
             return null;
         }

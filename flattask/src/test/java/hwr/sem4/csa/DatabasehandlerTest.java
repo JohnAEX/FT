@@ -10,27 +10,14 @@ public class DatabasehandlerTest {
     @BeforeAll
     public static void runBeforeAll(){
         Databasehandler.instanceOf().initObjectDBConnection();
-        Databasehandler.instanceOf().clearAll();
-        //Databasehandler.instanceOf().close();
+        //Databasehandler.instanceOf().clearAll();
     }
 
     @AfterAll
     public static void runAfterAll(){
-        //Databasehandler.instanceOf().initObjectDBConnection();
-        Databasehandler.instanceOf().clearAll();
+        //Databasehandler.instanceOf().clearAll();
         Databasehandler.instanceOf().close();
     }
-
-    /*
-    @BeforeEach
-    public void runBeforeEach(){
-        Databasehandler.instanceOf().initObjectDBConnection();
-    }
-
-    @AfterEach
-    public void runAfterEach(){
-        Databasehandler.instanceOf().close();
-    }*/
 
     @Test
     public void getCommunityByIdTest(){
@@ -38,7 +25,6 @@ public class DatabasehandlerTest {
         testCommunity.setCreationTime("12.04.2018");
         testCommunity.setId("TESTID");
         testCommunity.setDotosList(null);
-        testCommunity.setParticipatorIDs(null);
         testCommunity.setTaskList(null);
 
         //Databasehandler.instanceOf().initObjectDBConnection();
